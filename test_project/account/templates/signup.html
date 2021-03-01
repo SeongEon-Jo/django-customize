@@ -8,8 +8,13 @@
 </head>
 <body>
   <h1>회원가입</h1>
-  <form action="" method="POST">
+  <form action="{% url 'signup' %}" method="POST">
+    {% csrf_token %}
+    <input type="email" name="email">
+    <br>
     <input type="text" name="username">
+    <br>
+    <input type="text" name="role">
     <br>
     <input type="password" name="password1">
     <br>
